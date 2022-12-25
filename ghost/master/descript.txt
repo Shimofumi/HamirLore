@@ -1,0 +1,17 @@
+charset,UTF-8
+
+name,ヘイミル・ロゥ
+type,ghost
+
+sakura.name,ヘイミル・ロゥ
+kero.name,ダスクリーフ
+
+sstp.allowunspecifiedsend,1
+
+icon,icon.ico
+
+shiori,yaya.dll
+
+craftman,Shimofumi
+craftmanw,下田文雄
+craftmanurl,https://ukadon.shillest.net/@Shimofumi
