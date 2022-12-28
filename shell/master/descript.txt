@@ -1,11 +1,11 @@
 charset,UTF-8
 
 //シェル一式のライセンスは以下のようになります。
-//http://creativecommons.org/licenses/by-nc-nd/2.1/jp/
+//https://creativecommons.org/licenses/by-sa/4.0/
 
 craftman,Shimofumi
 craftmanurl,https://ukadon.shillest.net/@Shimofumi
-craftmanw,しもだふみお
+craftmanw,しもふみ
 
 name,The Keys to December
 type,shell

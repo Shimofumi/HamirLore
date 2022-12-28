@@ -1,0 +1,15 @@
+charset,UTF-8
+ghost/master/messagetxt/engilsh.txt
+ghost/master/messagetxt/classical-chinese.txt
+ghost/master/messagetxt/english.txt
+ghost/master/messagetxt/japanese.txt
+ghost/master/messagetxt/simplified-chinese.txt
+ghost/master/messagetxt/traditional-chinese.txt
+ghost/master/messagetxt/
+ghost/master/system/aya_lilith.dic
+ghost/master/system/aya_lilith_ex.dic
+ghost/master/system/yaya_compatible.dic
+ghost/master/system/yaya_optional.dic
+ghost/master/system/yaya_shiori3.dic
+ghost/master/system/yaya.txt
+ghost/master/yaya_config.txt
