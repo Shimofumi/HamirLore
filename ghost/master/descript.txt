@@ -13,5 +13,5 @@ icon,icon.ico
 shiori,yaya.dll
 
 craftman,Shimofumi
-craftmanw,下田文雄
+craftmanw,しもふみ
 craftmanurl,https://ukadon.shillest.net/@Shimofumi

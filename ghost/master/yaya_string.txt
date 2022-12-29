@@ -34,7 +34,7 @@ On_sakura.portalsites_EX : array
 On_recommendrootbutton.caption
 {
 	"おすすめ‥‥"
-	"SHIORIコア"
+	
 }
 
 //------------------------------------------------------------------------------
@@ -43,7 +43,7 @@ On_recommendrootbutton.caption
 On_sakura.recommendsites_EX : array
 {
 	"里々/整備班カスタム | https://github.com/ponapalt/satoriya-shiori/wiki | "
-	"華和梨              | https://kawari.github.io/                        | "
+	"下定雅弘の中国文学の回廊 | http://chinese.art.coocan.jp/                    | "
 }
 
 //------------------------------------------------------------------------------
@@ -51,7 +51,7 @@ On_sakura.recommendsites_EX : array
 //------------------------------------------------------------------------------
 On_kero.recommendbuttoncaption
 {
-	"マック朗のおすすめ"
+	"おすすめ"
 }
 
 //------------------------------------------------------------------------------
@@ -84,7 +84,7 @@ On_readmebutton.caption
 On_vanishbutton.caption
 {
 	"さよなら"
-	"別れの日"
+	"もう完全に忘れる"
 }
 
 //------------------------------------------------------------------------------

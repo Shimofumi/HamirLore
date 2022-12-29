@@ -49,6 +49,7 @@ MouseDoubleClick0Head
 {
 	//頭をつついてランダムトーク
 	OnAiTalk
+	
 }
 
 // MouseDoubleClick0Face{}
@@ -62,8 +63,6 @@ MouseDoubleClick0Bust
 	--
 	if ( sawattakazu <= 3 )
 	{
-    "のこり%(SHIORI3FW.DelayEventTime)秒です"
-	"%(sawattakazu)"
 	"\0\s[21]うん？%(username)も酔っているのかな？"
 	"\0\s[4]*触\w1覚\w1フ\w1ィ\w1ー\w1ド\w1バ\w1ッ\w1ク\w1は\w1あ\w1り\w1ま\w1せ\w1ん\w1*\w9\w9"
 	"\0\s[1]ちょっと！？\w9\w9"
@@ -194,7 +193,7 @@ MouseDoubleClick0Bust
 MouseDoubleClick0
 {
 	//顔以外のつつきでメニュー展開
-	// OpenMenu
+	OpenMenu
 }
 
 //kero側のつつかれ反応
