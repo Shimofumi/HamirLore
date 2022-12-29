@@ -1,7 +1,7 @@
 charset,UTF-8
 file,copyright awareness.txt3b8a67e0c665019e8ee02c7c781b658fsize=2345date=2012-12-21T00:00:00
-file,ghost/master/descript.txt9fb35bdfb240315b9549fe9aefacfb24size=272date=2012-12-21T00:00:00
-file,ghost/master/icon.ico6580606e88ea6c29cd35b3963dc707c9size=1718date=2012-12-21T00:00:00
+file,ghost/master/descript.txt12271b038b824fd17e5767e2b48d579esize=341date=2012-12-21T00:00:00
+file,ghost/master/icon.ico59de103a2e26998fb1517912d85978afsize=4286date=2012-12-21T00:00:00
 file,ghost/master/stmp_mcr.png0718c8f9c660511d20004426e7d6b9c4size=253date=2012-12-21T00:00:00
 file,ghost/master/stmp_yym.pngaaf1640b1855976ec6998dff7da91d25size=164date=2012-12-21T00:00:00
 file,ghost/master/system/_loading_order.txtd2a7d2ad20413596ee9aba0ebdb5543csize=39date=2012-12-21T00:00:00
@@ -20,14 +20,14 @@ file,ghost/master/yaya_communicate.txt64d6f507953133eae835a68c1a2b7272size=280
 file,ghost/master/yaya_emerg.txt2eef24976615e271ff9e06a571f33eddsize=1118date=2012-12-21T00:00:00
 file,ghost/master/yaya_emerg_dic.txt39b72e5b2cca26b072f574aae58ecebesize=641date=2012-12-21T00:00:00
 file,ghost/master/yaya_etc.txt48bd25892fb2e60b411475cab83a5b7bsize=18197date=2012-12-21T00:00:00
-file,ghost/master/yaya_homeurl.txtbdfd53696fb1ca2709cdb5a34e3baeecsize=559date=2012-12-21T00:00:00
+file,ghost/master/yaya_homeurl.txt2ef865c5baf1d32c139cc886d7c58354size=633date=2012-12-21T00:00:00
 file,ghost/master/yaya_menu.txt4e3f6252f5cd583f27b43a7edcb44559size=3859date=2012-12-21T00:00:00
-file,ghost/master/yaya_mouse.txtdab9b39a1c1795ce45998c5ce098b42dsize=9415date=2012-12-21T00:00:00
+file,ghost/master/yaya_mouse.txtf98ffc4a3c17f8b67c1541abdd126c36size=9466date=2012-12-21T00:00:00
 file,ghost/master/yaya_string.txt8f0bc368824b69638784b59079a4b312size=4008date=2012-12-21T00:00:00
 file,ghost/master/yaya_tmpl_util.txtb5ccd17754790ae8af8e928d742cea1csize=8622date=2012-12-21T00:00:00
 file,ghost/master/yaya_word.txt5c2ae6ad2209361852d377ab4ee5404dsize=7201date=2012-12-21T00:00:00
 file,install.txt190c4b8e8495ee94724af7136582d7c3size=72date=2012-12-21T00:00:00
-file,readme.txt60ba89f8ff7ff2e9403b9e66f51347a9size=3301date=2012-12-21T00:00:00
+file,readme.txt8828bc5214e93c766c1ab9e8e67daedasize=3687date=2012-12-21T00:00:00
 file,shell/master/descript.txt47facad773cc7c9f2dd9d3583fdf9936size=1145date=2012-12-21T00:00:00
 file,shell/master/menu_background.png7b58a58b87128be6c5e9bfb0c3e64dadsize=103date=2012-12-21T00:00:00
 file,shell/master/menu_foreground.pngc854d9ecf65fee71f74ac7ab4be1a95csize=205date=2012-12-21T00:00:00
