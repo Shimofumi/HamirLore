@@ -20,7 +20,7 @@ file,ghost/master/yaya_communicate.txt64d6f507953133eae835a68c1a2b7272size=280
 file,ghost/master/yaya_emerg.txt2eef24976615e271ff9e06a571f33eddsize=1118date=2012-12-21T00:00:00
 file,ghost/master/yaya_emerg_dic.txt39b72e5b2cca26b072f574aae58ecebesize=641date=2012-12-21T00:00:00
 file,ghost/master/yaya_etc.txt48bd25892fb2e60b411475cab83a5b7bsize=18197date=2012-12-21T00:00:00
-file,ghost/master/yaya_homeurl.txt2ef865c5baf1d32c139cc886d7c58354size=633date=2012-12-21T00:00:00
+file,ghost/master/yaya_homeurl.txtfc759df02f961bcd595364c1d3ea0b32size=635date=2012-12-21T00:00:00
 file,ghost/master/yaya_menu.txt4e3f6252f5cd583f27b43a7edcb44559size=3859date=2012-12-21T00:00:00
 file,ghost/master/yaya_mouse.txtf98ffc4a3c17f8b67c1541abdd126c36size=9466date=2012-12-21T00:00:00
 file,ghost/master/yaya_string.txt8f0bc368824b69638784b59079a4b312size=4008date=2012-12-21T00:00:00
