@@ -15,3 +15,5 @@ shiori,yaya.dll
 craftman,Shimofumi
 craftmanw,しもふみ
 craftmanurl,https://ukadon.shillest.net/@Shimofumi
+
+homeurl,https://raw.githubusercontent.com/Shimofumi/HamirLore/main/
