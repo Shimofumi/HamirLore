@@ -1,0 +1,3 @@
+charset,UTF-8
+ghost\master\stmp_mcr.png
+ghost\master\stmp_yym.png

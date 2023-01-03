@@ -9,5 +9,5 @@
 //------------------------------------------------------------------------------
 On_homeurl
 {
-https://raw.githubusercontent.com/Shimofumi/HamirLore/main/
+"https://raw.githubusercontent.com/Shimofumi/HamirLore/main/"
 }

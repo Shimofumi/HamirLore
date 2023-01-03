@@ -1,0 +1,9 @@
+.git/,noupdate,nonar
+.github/,noupdate,nonar
+.gitignore,noupdate,nonar
+developer_options.txt,noupdate,nonar
+md5buildignore.txt,noupdate,nonar
+README.md,noupdate,nonar
+updates2.dau,noupdate,nonar
+updates.txt,noupdate,nonar
+ghost/master/yaya_variable.cfg,noupdate,nonar
