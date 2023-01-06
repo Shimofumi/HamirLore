@@ -18,7 +18,7 @@ file,ghost/master/yaya_change.txtc3d11b5bce24082d24f24b7caa9b816bsize=3051dat
 file,ghost/master/yaya_communicate.txt64d6f507953133eae835a68c1a2b7272size=2809date=2012-12-21T00:00:00
 file,ghost/master/yaya_emerg.txt2eef24976615e271ff9e06a571f33eddsize=1118date=2012-12-21T00:00:00
 file,ghost/master/yaya_emerg_dic.txt39b72e5b2cca26b072f574aae58ecebesize=641date=2012-12-21T00:00:00
-file,ghost/master/yaya_etc.txt97576c36ba4dd2f3f103a9cd7c0a9939size=21162date=2012-12-21T00:00:00
+file,ghost/master/yaya_etc.txt7e9a1247118f02340694973d42af128asize=21406date=2012-12-21T00:00:00
 file,ghost/master/yaya_homeurl.txtfc759df02f961bcd595364c1d3ea0b32size=635date=2012-12-21T00:00:00
 file,ghost/master/yaya_menu.txt4e3f6252f5cd583f27b43a7edcb44559size=3859date=2012-12-21T00:00:00
 file,ghost/master/yaya_mouse.txt6ee8fd84ea55459be0bfe4da9a7bff7asize=13021date=2012-12-21T00:00:00
