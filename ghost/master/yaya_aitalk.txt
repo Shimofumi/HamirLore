@@ -9,7 +9,29 @@
 //******************************************************************************
 RandomTalk
 {
-    TOSTR(EVAL(CHR(0x22)+RandomTalkEx()+CHR(0x22)))
+    TOSTR(EVAL(CHR(0x22)+RandomTalkProcessor()+CHR(0x22)))
+}
+
+// RandomTalkExSmallHEChan など モードを後ろにつけた関数でモード特有ランダムトークを
+// かけるようにするための細工
+// 結果は通常ランダムトークとまぜまぜされてnonoverlapに突っ込まれる
+
+RandomTalkProcessor : nonoverlap
+{
+	_talk = IARRAY()
+	
+	_talk ,= RandomTalkEx() //一般ランダムトークを配列として追加
+	
+	_fname = 'RandomTalkEx' + mode
+	
+	if ISFUNC(_fname) {
+		_v = EVAL(_fname)
+		if GETTYPE(_v) == 4 { //汎用配列か？
+			_talk ,= _v //トーク配列に追加
+		}
+	}
+	
+	parallel _talk
 }
 
 //------------------------------------------------------------------------------
@@ -18,7 +40,7 @@ RandomTalk
 //上のRandomTalkの中身で%( )を展開していますので、" "を使わなくてもOKです。
 //高速化対策
 //------------------------------------------------------------------------------
-RandomTalkEx : nonoverlap
+RandomTalkEx : array
 {
 
 	'\0\s[0]春の暮れには\w5もう春着も出来上がって、\w9\n景色ものどかなので、\w9\n影法師と\w3連れ立ってそぞろ歩けば、\w9\n喜びと憂いとが心の中で、\w5こもごも織りなされる。\w9\n\n…\w5…\w5 %(username)、\w5散歩はすき？\e'
