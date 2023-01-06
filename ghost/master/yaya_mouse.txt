@@ -29,12 +29,33 @@ MouseMove0Head
 	"\0\s[7]犬猫じゃないんだから\w5…\w5…\w5\e"
 }
 
+//追加シェルちいさなへーちゃんさま
+MouseMoveSmallHEChan0Head
+{
+	"\0\s[4]\w5…\w5…\e"
+	"\0\s[5]*手が空をきる*\e"
+	"\0\s[21]\w5…\w5…\e"
+	"\0\s[9]%(username)は撫で魔であったか……\e"
+	"\0\s[1]えへへ\w5…\w5…\e"
+	"\0\s[7]犬猫じゃないんだから\w5…\w5…\w5\s[21]\n…\w5…\w5いや、\w3この姿なら、\w5気持ちは分からんでもないが……\e"
+}
+
 MouseMove0Bust
 {
 	"\0\s[0]うわ。\e"
 	"\0\s[1]あのね。\e"
 	"\0\s[8]…\w5…\w6\e"
 	"\0\s[21]うん？\w9%(username)も酔っているのかな？"
+}
+
+//追加シェルちいさなへーちゃんさま
+MouseMoveSmallHEChan0Bust
+{
+	"\0\s[0]うわ。\e"
+	"\0\s[1]おまわりさーん！街卒！だれでもいいからこやつをひっ捕らえよ！\e"
+	"\0\s[4]なにすんのさ！\e"
+	"\0\s[8]…\w5…\w6\e"
+	"\0\s[7]へんたい！\w5やめろ！"
 }
 
 //MouseMove0Twintail{}
@@ -52,7 +73,13 @@ MouseDoubleClick0Head
 	
 }
 
-// MouseDoubleClick0Face{}
+//追加シェルちいさなへーちゃんさま
+MouseDoubleClickSmallHEChan0Head
+{
+	//頭をつついてランダムトーク
+	OnAiTalk
+	
+}
 
 
 
@@ -192,7 +219,86 @@ MouseDoubleClick0Bust
 
 }
 
+//追加シェルちいさなへーちゃんさま
+MouseDoubleClickSmallHEChan0Bust
+{
+	sawattakazu++
+	--
+	if ( sawattakazu <= 5 )
+	{
+		"\0\s[9]なにすんのさ！"
+		"\0\s[0]ばか！やめろ！"
+		"\0\s[6]…\w5…\w5へんたい。"
+		"\0\s[4]あほ！やめろ！"
+		"\0\s[9]へんたい！やめろ！"
+	}
+	elseif ( sawattakazu == 6 )
+	{
+		"\0\s[4]てめー！おこるよ！"
+	}
+	elseif ( sawattakazu == 7 )
+	{
+		"\0\s[0]ヒトカスのへんたいめ！やめろっていったらやめろ！"
+	}
+	elseif ( sawattakazu == 8 )
+	{
+		"\0\s[4]めるどっ！しゃいせっ！去你的！"
+	}
+	elseif ( sawattakazu == 9 )
+	{
+		"\0\s[4]おまえなんかチェルノボーグにおそわれてしまえ！"
+	}
+	elseif ( sawattakazu == 10 )
+	{
+		//こどもなので若干フカシが入ってます
+		"\0\s[6]今のわたしは竜神ぞ。\w9\n小雅の楚茨や信南山にうたわれて、\w5先公先王もまた姜嫄も、\w5みんなわたしに従ってくれるけれど、\w5\n\nおまえは従わないのか？"
+	}
+	elseif ( sawattakazu == 11 )
+	{
+		"\0\s[7]おまえはなんでやめろっていってんのに従わないんだ！"
+	}
+	elseif ( sawattakazu == 12 )
+	{
+		"\0\s[0]おまえは！\w5わたしを！\w5おこらせた！"
+	}
+	elseif ( sawattakazu == 13 )
+	{
+		//他人に対して使う最も強い悪口は、自身が経験したもっとも嫌なことの裏返し
+		"\0\s[22]追放刑だ！\w9\w9"
+	}
+	elseif ( sawattakazu == 14 )
+	{
+		"\0\s[22]追放刑だ！\w9\-"
+	}
+	elseif ( sawattakazu == 15 )
+	{
+		"\0\s[0]なぜきかない！おまえは！なんで！\w3なんで！\w5なんで！…\w5…\w5"
+	}
+	elseif ( sawattakazu == 16 )
+	{
+		"\0\s[0]……おまえをカールズバードに眠るはらからたちに言いつけてやる。\-"
+	}
+	elseif ( sawattakazu >= 16 )
+	{
+		"\0\s[22]\f[color,red]カールズバードの洞窟は開かれない。\w9\n何故なら追放されたのはヘイミル・ロゥだからだ。\f[color,default]"
+		"\0\s[22]\f[color,red]…\w5…\w5\n…\w5…\w5…\w5…\w5\nしかし何も起きなかった。\f[color,default]"
+		"\0\s[22]\f[color,red]…\w5…\w5\n…\w5…\w5…\w5…\w5\nしかし何も起きなかった。\f[color,default]"
+		"\0\s[22]\f[color,red]…\w5…\w5\n…\w5…\w5…\w5…\w5\nこのちいさなどらごんは泣いている。\f[color,default]"
+		"\0\s[22]\f[color,red]…\w5…\w5\n…\w5…\w5…\w5…\w5\nこのちいさなどらごんは泣いている。\f[color,default]"
+	}
+	--
+	SHIORI3FW.SetDelayEvent( 'sawariInitialize' , 30 )
+}
+
+
 MouseDoubleClick0
+{
+	//顔以外のつつきでメニュー展開
+	OpenMenu
+}
+
+//追加シェルちいさなへーちゃんさま
+MouseDoubleClickSmallHEChan0
 {
 	//顔以外のつつきでメニュー展開
 	OpenMenu
@@ -233,25 +339,28 @@ OnMouseWheel
 OnMouseDoubleClick
 {
 	AYATEMPLATE.MouseEventExec('MouseDoubleClick');
-	
-	    if ( reference[3] == 0 ) //0なら本体1なら相方
-    {
-        case reference[4]	//一致したwhen節を実行
-        {
-            when 'bust'
-            {
-                if ( touchpoint == reference[4] )
-                {
-                    sawariMuneOko()
-                }
-                else
-                {
-                    sawariMune()
-                }
-            }
-        }
-    }
 }
+
+//------------------------------------------------------------------------------
+//モードチェンジ時に呼び出されるやつ
+//SmallHEChanが実装予定
+//------------------------------------------------------------------------------
+
+
+OnMouseDoubleClickSmallHEChan
+{
+	AYATEMPLATE.MouseEventExec('MouseDoubleClickSmallHEChan');
+}
+
+
+
+OnMouseMoveSmallHEChan
+{
+	AYATEMPLATE.MouseMoveWheelFunc(0,50,'MouseMoveSmallHEChan')
+}
+
+
+
 
 
 
