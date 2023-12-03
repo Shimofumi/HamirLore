@@ -20,6 +20,7 @@ var/
 __MACOSX/
 XtraStuf.mac/
 
+/ghost/master/yaya_variable.cfg
 
 /developer_options.txt
 /md5buildignore.txt
