@@ -10,7 +10,7 @@ file,ghost/master/system/yaya_base/config.dicacc9b7c3f25c4e564abdac847f103cdds
 file,ghost/master/system/yaya_base/optional.dicff4da728a656a8aa6a38939e654c51f2size=9953date=2012-12-21T00:00:00
 file,ghost/master/system/yaya_base/shiori3.dic5174199cdc98d173c13d629d2d788d97size=51228date=2012-12-21T00:00:00
 file,ghost/master/system_config.txt226ea3aa3cfcb1f7fbb56267c2e66378size=678date=2012-12-21T00:00:00
-file,ghost/master/yaya.dll8a0a0c196b76a4a1f12a6e44499351eesize=880640date=2012-12-21T00:00:00
+file,ghost/master/yaya.dll49b388973209005e5586f9e54b008bb1size=880640date=2012-12-21T00:00:00
 file,ghost/master/yaya.txt0ee7086403633930265836e2b1cbbea2size=2552date=2012-12-21T00:00:00
 file,ghost/master/yaya_aitalk.txtb0dba7036faf6250358199a3255be08asize=32222date=2012-12-21T00:00:00
 file,ghost/master/yaya_bootend.txt4b8fb793b29d63a6383ef9c2c8c78a4csize=6256date=2012-12-21T00:00:00
