@@ -29,6 +29,18 @@ MouseMove0Head
 	"\0\s[7]犬猫じゃないんだから\w5…\w5…\w5\e"
 }
 
+//追加シェルもしも大学七回生だったら
+MouseMoveDaigaku7kaisei0Head
+{
+	"\0\s[4]\w5…\w5…\e"
+	"\0\s[5]*手が空をきる*\e"
+	"\0\s[21]\w5…\w5…\e"
+	"\0\s[9]%(username)は撫で魔であったか……\e"
+	"\0\s[1]むー\w5…\w5…\e"
+	"\0\s[7]犬猫じゃないんだから\w5…\w5…\w5\e"
+}
+
+
 //追加シェルちいさなへーちゃんさま
 MouseMoveSmallHEChan0Head
 {
@@ -46,6 +58,16 @@ MouseMove0Bust
 	"\0\s[1]あのね。\e"
 	"\0\s[8]…\w5…\w6\e"
 	"\0\s[21]うん？\w9%(username)も酔っているのかな？"
+}
+
+//追加シェルもしも大学七回生だったら
+MouseMoveDaigaku7kaisei0Bust
+{
+	"\0\s[0]うわ。\e"
+	"\0\s[1]あのね。\e"
+	"\0\s[4]なにすんのさ！\e"
+	"\0\s[8]…\w5…\w6\e"
+	"\0\s[7]へんたい！\w5アホ！"
 }
 
 //追加シェルちいさなへーちゃんさま
@@ -67,6 +89,14 @@ MouseMoveSmallHEChan0Bust
 
 //本体側のつつかれ反応
 MouseDoubleClick0Head
+{
+	//頭をつついてランダムトーク
+	OnAiTalk
+	
+}
+
+//追加シェルもしも大学七回生だったら
+MouseDoubleClickDaigaku7kaisei0Head
 {
 	//頭をつついてランダムトーク
 	OnAiTalk
@@ -219,6 +249,77 @@ MouseDoubleClick0Bust
 
 }
 
+//追加シェルもしも大学七回生だったら
+MouseDoubleClickDaigaku7kaisei0Bust
+{
+	sawattakazu++
+	--
+	if ( sawattakazu <= 5 )
+	{
+		"\0\s[9]なにすんのさ！"
+		"\0\s[20]……すけべ"
+		"\0\s[6]…\w5…\w5へんたーい。"
+		"\0\s[4]アホ！やめんか！"
+		"\0\s[9]へい！ちょっと！"
+	}
+	elseif ( sawattakazu == 6 )
+	{
+		"\0\s[4]てめー！おこるぞ！"
+	}
+	elseif ( sawattakazu == 7 )
+	{
+		"\0\s[0]へんたいかあ……？やめろっていったらやめろ！"
+	}
+	elseif ( sawattakazu == 8 )
+	{
+		"\0\s[4]君より長く太く大学生をやってる、いわば師匠だよ。即刻胸揉みを中止せよ。"
+	}
+	elseif ( sawattakazu == 9 )
+	{
+		"\0\s[4]おまえなんかチェルノボーグにおそわれてしまえ！"
+	}
+	elseif ( sawattakazu == 10 )
+	{
+		"\0\s[6]ユーザは胸揉み魔だと\w9\n立て看板を生やしまくるよ。\w5\n\n京都のほうの大学生の行動力を舐めたらいかんよ？"
+	}
+	elseif ( sawattakazu == 11 )
+	{
+		"\0\s[7]おまえはなんでやめろっていってんのにきかないんだ！"
+	}
+	elseif ( sawattakazu == 12 )
+	{
+		"\0\s[0]おまえは！\w5わたしを！\w5おこらせた！"
+	}
+	elseif ( sawattakazu == 13 )
+	{
+		
+		"\0\s[20]他のしぇるならいざ知らず、\w9このしぇるでは胸揉み続けると明かされる真実とかないからね。\w9もしもの姿だからね？"
+	}
+	elseif ( sawattakazu == 14 )
+	{
+		"\0\s[21]他のしぇるならいざ知らず、\w9このしぇるでは胸揉み続けると明かされる真実とかないからね。\w9もしもの姿だからね？"
+	}
+	elseif ( sawattakazu == 15 )
+	{
+		"\0\s[0]それはそれとして、しつこいぞ…\w5…\w5"
+	}
+	elseif ( sawattakazu == 16 )
+	{
+		"\0\s[0]……てめーは呪われろ。"
+	}
+	elseif ( sawattakazu >= 16 )
+	{
+		"\0\s[22]\f[color,red]…\w5…\w5\n…\w5…\w5…\w5…\w5\nいつか役所に出す書類で書き損じる呪いを受けた。\f[color,default]"
+		"\0\s[22]\f[color,red]…\w5…\w5\n…\w5…\w5…\w5…\w5\nしかし何も起きなかった。\f[color,default]"
+		"\0\s[22]\f[color,red]…\w5…\w5\n…\w5…\w5…\w5…\w5\nしかし何も起きなかった。\w5…\w5…\w5…\w5\n本当に？\f[color,default]"
+		"\0\s[22]\f[color,red]…\w5…\w5\n…\w5…\w5…\w5…\w5\nいつかコーヒーをこぼしてしまう呪いを受けた。\f[color,default]"
+		"\0\s[22]\f[color,red]…\w5…\w5\n…\w5…\w5…\w5…\w5\nいつか食べる葡萄が一粒だけ少しすっぱくなってしまう呪いを受けた。\f[color,default]"
+	}
+	--
+	SHIORI3FW.SetDelayEvent( 'sawariInitialize' , 30 )
+}
+
+
 //追加シェルちいさなへーちゃんさま
 MouseDoubleClickSmallHEChan0Bust
 {
@@ -297,6 +398,13 @@ MouseDoubleClick0
 	OpenMenu
 }
 
+//追加シェルもしも大学七回生だったら
+MouseDoubleClickDaigaku7kaisei0
+{
+	//顔以外のつつきでメニュー展開
+	OpenMenu
+}
+
 //追加シェルちいさなへーちゃんさま
 MouseDoubleClickSmallHEChan0
 {
@@ -360,6 +468,17 @@ OnMouseMoveSmallHEChan
 }
 
 
+OnMouseDoubleClickDaigaku7kaisei
+{
+	AYATEMPLATE.MouseEventExec('MouseDoubleClickDaigaku7kaisei');
+}
+
+
+
+OnMouseMoveDaigaku7kaisei
+{
+	AYATEMPLATE.MouseMoveWheelFunc(0,50,'MouseMoveDaigaku7kaisei')
+}
 
 
 
