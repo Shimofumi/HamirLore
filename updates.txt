@@ -46,7 +46,7 @@ file,shell/Daigaku7kaisei/surface0011.pngeae81e80517b6db3df7cfdb8f4d36f17size=
 file,shell/Daigaku7kaisei/surface0020.pngfb8a28bb80d871c2bae146828e7418dasize=292013date=2012-12-21T00:00:00
 file,shell/Daigaku7kaisei/surface0021.pngbf9cc2a232e11b74970b011bd79347d5size=292185date=2012-12-21T00:00:00
 file,shell/Daigaku7kaisei/surface0022.pngbd9a02de67a7adc977ca6f97e5e5dddfsize=233351date=2012-12-21T00:00:00
-file,shell/Daigaku7kaisei/surfaces.txtdb38023316814a2be1538877ca085ee6size=1408date=2012-12-21T00:00:00
+file,shell/Daigaku7kaisei/surfaces.txte86e819b7c4a237fc1f9a9cc18fbf70bsize=1438date=2012-12-21T00:00:00
 file,shell/Daigaku7kaisei/surfacetable.txt7e979591f1e27dfd633cfe599ac9e874size=335date=2012-12-21T00:00:00
 file,shell/master/descript.txt47facad773cc7c9f2dd9d3583fdf9936size=1145date=2012-12-21T00:00:00
 file,shell/master/menu_background.png7b58a58b87128be6c5e9bfb0c3e64dadsize=103date=2012-12-21T00:00:00
@@ -67,6 +67,6 @@ file,shell/master/surface0011.pngeae81e80517b6db3df7cfdb8f4d36f17size=301date
 file,shell/master/surface0020.png8e994903b2c78577b3d0b5c830c48dc8size=72548date=2012-12-21T00:00:00
 file,shell/master/surface0021.pnge1fa584a3406734cebd00389c4eaa81fsize=73572date=2012-12-21T00:00:00
 file,shell/master/surface0022.png4f8edffef406fb060a0fd4e321937aeasize=73623date=2012-12-21T00:00:00
-file,shell/master/surfaces.txt4656d1a19660d9140cae6176b301e003size=1421date=2012-12-21T00:00:00
+file,shell/master/surfaces.txta9a625ffdfe93ba33fea68caf57a3228size=1450date=2012-12-21T00:00:00
 file,shell/master/surfacetable.txt7e979591f1e27dfd633cfe599ac9e874size=335date=2012-12-21T00:00:00
 file,thumbnail.png7fdbee3c1d6665c175eaea63d28b4fe4size=70911date=2012-12-21T00:00:00
