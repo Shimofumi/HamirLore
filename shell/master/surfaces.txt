@@ -85,6 +85,13 @@ collision2,290,286,354,352,Bust
 sakura.balloon.offsetx,150
 }
 
+surface10
+{
+}
+
+surface11
+{
+}
 
 surface20
 {
