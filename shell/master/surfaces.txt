@@ -118,3 +118,67 @@ collision2,290,286,354,352,Bust
 
 sakura.balloon.offsetx,150
 }
+
+surface1000
+{
+element0,base,surface1000.png,0,0
+
+}
+
+surface1001
+{
+element0,base,surface1001.png,0,0
+
+}
+surface1002
+{
+element0,base,surface1002.png,0,0
+
+}
+
+surface.append0
+{
+	animation0.interval,periodic,4
+	animation0.pattern0,alternativestart,(1,2,3,4)
+
+	animation1.interval,never
+	animation1.pattern0,overlay,1002,0-700,0,0
+	animation1.pattern1,overlay,1000,50-60,0,0
+	animation1.pattern2,overlay,1001,20-60,0,0
+	animation1.pattern3,overlay,1002,20-50,0,0
+	animation1.pattern4,overlay,-1,70-100,0,0
+
+	animation2.interval,never
+	animation2.pattern0,overlay,1002,0-700,0,0
+	animation2.pattern1,overlay,1000,50-60,0,0
+	animation2.pattern2,overlay,1001,20-60,0,0
+	animation2.pattern3,overlay,1002,20-50,0,0
+	animation2.pattern5,overlay,1002,0-50,0,0
+	animation2.pattern6,overlay,1000,50-60,0,0
+	animation2.pattern7,overlay,1001,20-60,0,0
+	animation2.pattern8,overlay,1002,20-50,0,0
+	animation2.pattern9,overlay,-1,70-100,0,0
+
+	animation3.interval,never
+	animation3.pattern0,overlay,1002,0-700,0,0
+	animation3.pattern1,overlay,1000,50-60,0,0
+	animation3.pattern2,overlay,1001,20-60,0,0
+	animation3.pattern3,overlay,1002,20-50,0,0
+	animation3.pattern4,overlay,-1,70-100,0,0
+
+	animation4.interval,never
+	animation4.pattern0,overlay,1002,1000-2000,0,0
+	animation4.pattern1,overlay,1000,50-60,0,0
+	animation4.pattern2,overlay,1001,20-60,0,0
+	animation4.pattern3,overlay,1002,20-50,0,0
+	animation4.pattern4,overlay,-1,70-100,0,0
+
+	animation5.interval,never
+	animation5.pattern0,overlay,1002,0-2400,0,0
+	animation5.pattern1,overlay,1000,50-60,0,0
+	animation5.pattern2,overlay,1001,20-60,0,0
+	animation5.pattern3,overlay,1002,20-50,0,0
+	animation5.pattern4,overlay,-1,70-100,0,0
+
+	
+}
