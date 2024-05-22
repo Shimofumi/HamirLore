@@ -12,7 +12,7 @@ file,ghost/master/system/yaya_base/shiori3.dic5174199cdc98d173c13d629d2d788d97
 file,ghost/master/system_config.txt226ea3aa3cfcb1f7fbb56267c2e66378size=678date=2012-12-21T00:00:00
 file,ghost/master/yaya.dll49b388973209005e5586f9e54b008bb1size=880640date=2012-12-21T00:00:00
 file,ghost/master/yaya.txt0ee7086403633930265836e2b1cbbea2size=2552date=2012-12-21T00:00:00
-file,ghost/master/yaya_aitalk.txtf87f321e664681c751030837d86bc6adsize=48341date=2012-12-21T00:00:00
+file,ghost/master/yaya_aitalk.txt14133e221a454053027045b4e01f522bsize=48334date=2012-12-21T00:00:00
 file,ghost/master/yaya_bootend.txt4b8fb793b29d63a6383ef9c2c8c78a4csize=6256date=2012-12-21T00:00:00
 file,ghost/master/yaya_change.txtc3d11b5bce24082d24f24b7caa9b816bsize=3051date=2012-12-21T00:00:00
 file,ghost/master/yaya_communicate.txt64d6f507953133eae835a68c1a2b7272size=2809date=2012-12-21T00:00:00
