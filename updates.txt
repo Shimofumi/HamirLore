@@ -11,7 +11,7 @@ file,ghost/master/system/yaya_base/optional.dicff4da728a656a8aa6a38939e654c51f2
 file,ghost/master/system/yaya_base/shiori3.dic5174199cdc98d173c13d629d2d788d97size=51228date=2012-12-21T00:00:00
 file,ghost/master/system_config.txt226ea3aa3cfcb1f7fbb56267c2e66378size=678date=2012-12-21T00:00:00
 file,ghost/master/yaya.dll49b388973209005e5586f9e54b008bb1size=880640date=2012-12-21T00:00:00
-file,ghost/master/yaya.txt0ee7086403633930265836e2b1cbbea2size=2552date=2012-12-21T00:00:00
+file,ghost/master/yaya.txtf500677ee5ff29e4233ffe08494a7c09size=2767date=2012-12-21T00:00:00
 file,ghost/master/yaya_aitalk.txtfcb8e842da184972c37f07b544613d72size=51307date=2012-12-21T00:00:00
 file,ghost/master/yaya_bootend.txt4b8fb793b29d63a6383ef9c2c8c78a4csize=6256date=2012-12-21T00:00:00
 file,ghost/master/yaya_change.txtc3d11b5bce24082d24f24b7caa9b816bsize=3051date=2012-12-21T00:00:00
@@ -20,8 +20,9 @@ file,ghost/master/yaya_emerg.txt2eef24976615e271ff9e06a571f33eddsize=1118date
 file,ghost/master/yaya_emerg_dic.txt39b72e5b2cca26b072f574aae58ecebesize=641date=2012-12-21T00:00:00
 file,ghost/master/yaya_etc.txtf17642174561071fabb353c2c6051dbfsize=22424date=2012-12-21T00:00:00
 file,ghost/master/yaya_homeurl.txtfc759df02f961bcd595364c1d3ea0b32size=635date=2012-12-21T00:00:00
-file,ghost/master/yaya_menu.txt4e3f6252f5cd583f27b43a7edcb44559size=3859date=2012-12-21T00:00:00
+file,ghost/master/yaya_menu.txtfef3baf8b5bab1e0f56de2ed6f0e0b54size=3917date=2012-12-21T00:00:00
 file,ghost/master/yaya_mouse.txtb1cd77747a2e253318fb79ca7ab433fesize=16718date=2012-12-21T00:00:00
+file,ghost/master/yaya_poem.txt39b1621d35a135a03c540679278dd494size=16663date=2012-12-21T00:00:00
 file,ghost/master/yaya_string.txt8f0bc368824b69638784b59079a4b312size=4008date=2012-12-21T00:00:00
 file,ghost/master/yaya_tmpl_util.txtb5ccd17754790ae8af8e928d742cea1csize=8622date=2012-12-21T00:00:00
 file,ghost/master/yaya_word.txt5c2ae6ad2209361852d377ab4ee5404dsize=7201date=2012-12-21T00:00:00
