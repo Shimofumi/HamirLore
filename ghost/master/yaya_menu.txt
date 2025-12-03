@@ -27,6 +27,8 @@ OpenMenu
 		AYATEMPLATE.MenuItem("さっきの話は？","Menu_LASTTALK")
 	}
 	--
+	AYATEMPLATE.MenuItem("詩を作る","Menu_MakePoem")
+	--
 	AYATEMPLATE.MenuItem("しゃべり頻度を変えて","Menu_TALKINTERVAL")
 	--
 	//AYATEMPLATE.MenuItem("他のゴーストと話す","Menu_GHOSTCOMSTART")

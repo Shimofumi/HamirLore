@@ -1,0 +1,588 @@
+//******************************************************************************
+// ヘイミル・ロゥ 詩作モード
+//******************************************************************************
+
+//******************************************************************************
+// 詩作モード変数初期化
+//******************************************************************************
+PoemModeInit
+{
+    poem_part1 = ""
+    poem_part2 = ""
+    poem_part3 = ""
+    poem_drink_count = 0
+    poem_is_drunk_mode = 0
+}
+
+
+//******************************************************************************
+// メニューから呼び出し - 詩作モード開始
+//******************************************************************************
+Menu_MakePoem
+{
+    PoemModeInit
+    
+    "\0\s[0]何を詠む……\w9"
+    --
+    Poem_ShowSelect1
+}
+
+//******************************************************************************
+// 第1句 選択肢表示
+//******************************************************************************
+//******************************************************************************
+// 第1句 選択肢表示
+//******************************************************************************
+Poem_ShowSelect1
+{
+    // 語彙プールを作成
+    _pool = IARRAY
+    
+    if poem_is_drunk_mode
+    {
+        // 世俗語彙
+        _pool ,= "二日酔いの朝"
+        _pool ,= "空き瓶の山"
+        _pool ,= "財布の中身"
+        _pool ,= "冷めたラーメン"
+        _pool ,= "積みゲーの塔"
+        _pool ,= "締切の影"
+        _pool ,= "紫の瞳の"
+    }
+    else
+    {
+        // 通常語彙 第一句
+        _pool ,= "翼々たる帰鳥"
+        _pool ,= "靄々たる停雲"
+        _pool ,= "濛濛たる時雨"
+        _pool ,= "杯中の緑酒"
+        _pool ,= "芳菊林を開き"
+        _pool ,= "青松巌に列ぶ"
+        _pool ,= "悠々たる白雲"
+        _pool ,= "東園の樹"
+        _pool ,= "翩翩たる飛鳥"
+        _pool ,= "暮春に遊ぶ"
+        _pool ,= "穆穆たる良朝"
+        _pool ,= "東籬に菊を採り"
+        _pool ,= "人境に廬を結び"
+        _pool ,= "孤松の独立"
+        _pool ,= "秋菊　佳色有り"
+        _pool ,= "千山　鳥飛ぶこと絶え"
+        _pool ,= "孤舟の蓑笠翁"
+        _pool ,= "煙銷え日出でて"
+        _pool ,= "緑蟻の新醪"
+        _pool ,= "晩来　天　雪ふらんと欲し"
+        _pool ,= "小池の春水"
+
+    }
+    
+    // 重複なく3つ選ぶ
+    _size = ARRAYSIZE(_pool)
+    _used = IARRAY
+    
+    _idx = RAND(_size)
+    poem_choice_1 = _pool[_idx]
+    _used ,= _idx
+    
+    _idx = RAND(_size)
+    while ASEARCH(_idx, _used) != -1 { _idx = RAND(_size) }
+    poem_choice_2 = _pool[_idx]
+    _used ,= _idx
+    
+    _idx = RAND(_size)
+    while ASEARCH(_idx, _used) != -1 { _idx = RAND(_size) }
+    poem_choice_3 = _pool[_idx]
+    
+    // 選択肢表示
+    "\n"
+    --
+    AYATEMPLATE.MenuItem(poem_choice_1, "Poem_Select1_A", 100)
+    --
+    AYATEMPLATE.MenuItem(poem_choice_2, "Poem_Select1_B")
+    --
+    AYATEMPLATE.MenuItem(poem_choice_3, "Poem_Select1_C")
+    --
+    AYATEMPLATE.MenuItem("酒を飲む", "Poem_Drink1", 150)
+    --
+    AYATEMPLATE.MenuItem("やめる", "Poem_Cancel")
+}
+//------------------------------------------------------------------------------
+// 第1句 選択処理
+//------------------------------------------------------------------------------
+Poem_Select1_A
+{
+    poem_part1 = poem_choice_1
+    Poem_AfterSelect1
+}
+
+Poem_Select1_B
+{
+    poem_part1 = poem_choice_2
+    Poem_AfterSelect1
+}
+
+Poem_Select1_C
+{
+    poem_part1 = poem_choice_3
+    Poem_AfterSelect1
+}
+
+Poem_AfterSelect1
+{
+    "\0\s[2]%(poem_part1)……\w9"
+    --
+    Poem_ShowSelect2
+}
+
+//------------------------------------------------------------------------------
+// 第1句 リロール（酒を飲む）
+//------------------------------------------------------------------------------
+Poem_Drink1
+{
+    poem_drink_count++
+    
+    if poem_drink_count >= 5
+    {
+        // 5回目：酔い潰れて終了
+        Poem_PassOut
+    }
+    elseif poem_drink_count >= 4
+    {
+        // 4回目：世俗モード突入
+        poem_is_drunk_mode = 1
+        "\0\s[21]ひっく……あれ、なんの話だっけ……\w9"
+        --
+        Poem_ShowSelect1
+    }
+    elseif poem_drink_count == 3
+    {
+        "\0\s[20]うっ……まだいける……\w9"
+        --
+        Poem_ShowSelect1
+    }
+    elseif poem_drink_count == 2
+    {
+        "\0\s[5]……もう少しだけ。\w9"
+        --
+        Poem_ShowSelect1
+    }
+    else
+    {
+        "\0\s[5]ふむ、もう一杯……\w9"
+        --
+        Poem_ShowSelect1
+    }
+}
+
+//******************************************************************************
+// 第2句 選択肢表示
+//******************************************************************************
+Poem_ShowSelect2
+{
+    // 語彙プールを作成
+    _pool = IARRAY
+    
+    if poem_is_drunk_mode
+    {
+        // 世俗語彙
+        _pool ,= "給料日まで"
+        _pool ,= "冷蔵庫開けて"
+        _pool ,= "記憶が飛んで"
+        _pool ,= "単位を求めて"
+        _pool ,= "教授を避けて"
+        _pool ,= "バイト帰りに"
+        _pool ,= "彼女は"
+    }
+    else
+    {
+        // 通常語彙 第二句
+        _pool ,= "天穹を望めば"
+        _pool ,= "山々に憩い"
+        _pool ,= "雨に唄えば"
+        _pool ,= "風に乗りて"
+        _pool ,= "古巣を思い"
+        _pool ,= "東窓の下に"
+        _pool ,= "友を願えども"
+        _pool ,= "酒を願えども"
+        _pool ,= "八方同じく昏く"
+        _pool ,= "酒有り、酒有り"
+        _pool ,= "むしろに座りて"
+        _pool ,= "羽を休めて"
+        _pool ,= "我が庭に憩う"
+        _pool ,= "余靄に滌われ"
+        _pool ,= "風有り、南よりし"
+        _pool ,= "すなわち欣び"
+        _pool ,= "花薬　分れ列び"
+        _pool ,= "清琴　床に横たえ"
+        _pool ,= "悠然として"
+        _pool ,= "心遠ければ"
+        _pool ,= "此の中に真意有り"
+        _pool ,= "万径　人蹤絶え"
+        _pool ,= "独り寒江に"
+        _pool ,= "欸乃一声して"
+        _pool ,= "紅泥の小火炉"
+        _pool ,= "能く一杯を飲まんや"
+        _pool ,= "日高くして眠り足り"
+    }
+    
+    // 重複なく3つ選ぶ
+    _size = ARRAYSIZE(_pool)
+    _used = IARRAY
+    
+    _idx = RAND(_size)
+    poem_choice_1 = _pool[_idx]
+    _used ,= _idx
+    
+    _idx = RAND(_size)
+    while ASEARCH(_idx, _used) != -1 { _idx = RAND(_size) }
+    poem_choice_2 = _pool[_idx]
+    _used ,= _idx
+    
+    _idx = RAND(_size)
+    while ASEARCH(_idx, _used) != -1 { _idx = RAND(_size) }
+    poem_choice_3 = _pool[_idx]
+    
+    // 選択肢表示
+    "\n"
+    --
+    AYATEMPLATE.MenuItem(poem_choice_1, "Poem_Select2_A", 100)
+    --
+    AYATEMPLATE.MenuItem(poem_choice_2, "Poem_Select2_B")
+    --
+    AYATEMPLATE.MenuItem(poem_choice_3, "Poem_Select2_C")
+    --
+    AYATEMPLATE.MenuItem("酒を飲む", "Poem_Drink2", 150)
+    --
+    AYATEMPLATE.MenuItem("やめる", "Poem_Cancel")
+}
+
+//------------------------------------------------------------------------------
+// 第2句 選択処理
+//------------------------------------------------------------------------------
+Poem_Select2_A
+{
+    poem_part2 = poem_choice_1
+    Poem_AfterSelect2
+}
+
+Poem_Select2_B
+{
+    poem_part2 = poem_choice_2
+    Poem_AfterSelect2
+}
+
+Poem_Select2_C
+{
+    poem_part2 = poem_choice_3
+    Poem_AfterSelect2
+}
+
+Poem_AfterSelect2
+{
+    "\0\s[0]%(poem_part1)　%(poem_part2)……\w9"
+    --
+    Poem_ShowSelect3
+}
+
+//------------------------------------------------------------------------------
+// 第2句 リロール（酒を飲む）
+//------------------------------------------------------------------------------
+Poem_Drink2
+{
+    poem_drink_count++
+    
+    if poem_drink_count >= 5
+    {
+        Poem_PassOut
+    }
+    elseif poem_drink_count >= 4
+    {
+        poem_is_drunk_mode = 1
+        "\0\s[21]ひっく……えーと、%(poem_part1)……なんだっけ……\w9"
+        --
+        Poem_ShowSelect2
+    }
+    elseif poem_drink_count == 3
+    {
+        "\0\s[20]うっ……まだいける……\w9"
+        --
+        Poem_ShowSelect2
+    }
+    elseif poem_drink_count == 2
+    {
+        "\0\s[5]……もう少しだけ。\w9"
+        --
+        Poem_ShowSelect2
+    }
+    else
+    {
+        "\0\s[5]ふむ、もう一杯……\w9"
+        --
+        Poem_ShowSelect2
+    }
+}
+
+//******************************************************************************
+// 第3句 選択肢表示
+//******************************************************************************
+Poem_ShowSelect3
+{
+    // 語彙プールを作成
+    _pool = IARRAY
+    
+    if poem_is_drunk_mode
+    {
+        // 世俗語彙
+        _pool ,= "もう寝る"
+        _pool ,= "全部忘れた"
+        _pool ,= "また明日"
+        _pool ,= "腹が減った"
+        _pool ,= "単位は来ず"
+        _pool ,= "それでも生きる"
+        _pool ,= "温州蜜柑でございます。"
+        _pool ,= "もういない"
+    }
+    else
+    {
+        // 通常語彙 第三句
+        _pool ,= "心ほころぶ"
+        _pool ,= "憂いを忘る"
+        _pool ,= "日々に富む"
+        _pool ,= "陶然と楽しむ"
+        _pool ,= "独り歓然たり"
+        _pool ,= "酔い潰れたり"
+        _pool ,= "春醪独り撫す"
+        _pool ,= "首を掻きて踟躊す"
+        _pool ,= "東窓に飲む"
+        _pool ,= "平生を説く"
+        _pool ,= "欣慨、心に交わる"
+        _pool ,= "自ら楽しむ"
+        _pool ,= "嘆きは独り余に有り"
+        _pool ,= "言わんと欲して已に忘る"
+        _pool ,= "南山を見る"
+        _pool ,= "独り寒江の雪を釣る"
+        _pool ,= "山水　緑を巡らす"
+        _pool ,= "猶お未だ遅からず"
+        _pool ,= "閑坐して苔を看る"
+        _pool ,= "能く一杯を飲むや無や"
+    }
+    
+    // 重複なく3つ選ぶ
+    _size = ARRAYSIZE(_pool)
+    _used = IARRAY
+    
+    _idx = RAND(_size)
+    poem_choice_1 = _pool[_idx]
+    _used ,= _idx
+    
+    _idx = RAND(_size)
+    while ASEARCH(_idx, _used) != -1 { _idx = RAND(_size) }
+    poem_choice_2 = _pool[_idx]
+    _used ,= _idx
+    
+    _idx = RAND(_size)
+    while ASEARCH(_idx, _used) != -1 { _idx = RAND(_size) }
+    poem_choice_3 = _pool[_idx]
+    
+    // 選択肢表示
+    "\n"
+    --
+    AYATEMPLATE.MenuItem(poem_choice_1, "Poem_Select3_A", 100)
+    --
+    AYATEMPLATE.MenuItem(poem_choice_2, "Poem_Select3_B")
+    --
+    AYATEMPLATE.MenuItem(poem_choice_3, "Poem_Select3_C")
+    --
+    AYATEMPLATE.MenuItem("酒を飲む", "Poem_Drink3", 150)
+    --
+    AYATEMPLATE.MenuItem("やめる", "Poem_Cancel")
+}
+//------------------------------------------------------------------------------
+// 第3句 選択処理
+//------------------------------------------------------------------------------
+Poem_Select3_A
+{
+    poem_part3 = poem_choice_1
+    Poem_Complete
+}
+
+Poem_Select3_B
+{
+    poem_part3 = poem_choice_2
+    Poem_Complete
+}
+
+Poem_Select3_C
+{
+    poem_part3 = poem_choice_3
+    Poem_Complete
+}
+
+//------------------------------------------------------------------------------
+// 第3句 リロール（酒を飲む）
+//------------------------------------------------------------------------------
+Poem_Drink3
+{
+    poem_drink_count++
+    
+    if poem_drink_count >= 5
+    {
+        Poem_PassOut
+    }
+    elseif poem_drink_count >= 4
+    {
+        poem_is_drunk_mode = 1
+        "\0\s[21]ひっく……%(poem_part1)　%(poem_part2)……うぅ……\w9"
+        --
+        Poem_ShowSelect3
+    }
+    elseif poem_drink_count == 3
+    {
+        "\0\s[20]うっ……まだいける……\w9"
+        --
+        Poem_ShowSelect3
+    }
+    elseif poem_drink_count == 2
+    {
+        "\0\s[5]……もう少しだけ。\w9"
+        --
+        Poem_ShowSelect3
+    }
+    else
+    {
+        "\0\s[5]ふむ、もう一杯……\w9"
+        --
+        Poem_ShowSelect3
+    }
+}
+
+//******************************************************************************
+// 詩の完成
+//******************************************************************************
+Poem_Complete
+{
+    "\0\s[4]できた！\w9\n\n"
+    --
+    "%(poem_part1)　%(poem_part2)　%(poem_part3)\w9\w9"
+    --
+    "\n\n"
+    --
+    Poem_Evaluate
+}
+
+//******************************************************************************
+// 評価システム
+//******************************************************************************
+Poem_Evaluate
+{
+    // 特殊反応チェック（優先度順）
+    _special = Poem_CheckSpecial
+    if _special != ""
+    {
+        _special
+        --
+        "\e"
+        return
+    }
+    
+    // 世俗モードで完成した場合
+    if poem_is_drunk_mode
+    {
+        "\0\s[21]……なんだこれは。\w5いや、これはこれで味がある……のか？\e"
+        return
+    }
+    
+    // 通常のランダム評価
+    Poem_RandomEvaluate
+}
+
+//------------------------------------------------------------------------------
+// 特殊反応チェック
+// 該当すれば反応文を返す、なければ空文字
+//------------------------------------------------------------------------------
+Poem_CheckSpecial
+{
+    // 例：特定の語彙が含まれている場合
+    
+    // 「酒」+「酒」の組み合わせ
+    if "酒" _in_ poem_part1 && "酒" _in_ poem_part2
+    {
+        "\0\s[7]……おさけがあってうれしかったんだね。"
+        return
+    }
+
+    // 「酒」+「酔」の組み合わせ
+    if "酒" _in_ poem_part1 && "酔" _in_ poem_part3
+    {
+        "\0\s[7]……我ながら予言的だな。"
+        return
+    }
+    // 「言わんと欲して已に忘る」で終わる
+    if "已に忘る" _in_ poem_part3
+    {
+    "\0\s[21]……\W9本当に忘れてしまった。\n\w9何を言おうとしたのだったか\W9……\W9"
+    return
+    }
+    // 「友を願えども」を含む → 神農氏を思い出す
+    if "友を願えども" _in_ poem_part2
+    {
+        "\0\s[8]……神農氏は元気だろうか。\w5いや、もう千年は会っていないが……"
+        return
+    }
+
+    // ドラネーちゃん。あるいはカナドメさん
+    if "紫" _in_ poem_part1 && "女" _in_ poem_part2
+    {
+        "\0\s[10]……\w9うっ……\w9ぐすっ……\w9\w9\w9\w9\w9\n\w9\w9……ぐぅ……\w9……\w9……\w9\w9\w9\e"
+    }
+    
+    // 該当なし
+    ""
+}
+
+//------------------------------------------------------------------------------
+// ランダム評価
+//------------------------------------------------------------------------------
+Poem_RandomEvaluate
+{
+    // いいね系
+    "\0\s[5]なかなか……良い詩だね。\e"
+    "\0\s[4]ふむ、悪くない。\e"
+    "\0\s[7]これは……風情があるな。\e"
+    
+    // うーん系
+    "\0\s[2]うーん……？　まあ、これも詩か。\e"
+    "\0\s[0]……独創的、と言っておこうか。\e"
+    
+    // ほあっ系
+    "\0\s[21]ほあっ……これは……新しいね。\e"
+    "\0\s[20]……詩、なのか？　いや、詩だな。うん。\e"
+}
+
+//******************************************************************************
+// 酔い潰れ（5回飲んだ）
+//******************************************************************************
+Poem_PassOut
+{
+    "\0\s[20]うっ……もう無理だ……\w9\w9\n\n"
+    --
+    if poem_part1 != ""
+    {
+        "%(poem_part1)……%(poem_part2)……ぐぅ……\w9"
+    }
+    else
+    {
+        "詩……なんの話だっけ……ぐぅ……\w9"
+    }
+    --
+    "\e"
+}
+
+//******************************************************************************
+// キャンセル
+//******************************************************************************
+Poem_Cancel
+{
+    "\0\s[0]……また今度にしようか。\e"
+    "\0\s[7]気が向いたらまた詠もう。\e"
+}
